@@ -1,0 +1,74 @@
+
+body {
+  background-color: #0d0d0d;
+  color: #33ffcc;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+h1.glitch {
+  position: relative;
+  color: #33ffcc;
+  font-size: 3em;
+}
+h1.glitch::before,
+h1.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #ff00cc;
+  z-index: -1;
+}
+h1.glitch::before {
+  top: -2px;
+  text-shadow: -2px 0 magenta;
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+h1.glitch::after {
+  top: 2px;
+  text-shadow: -2px 0 cyan;
+  animation: glitch 1s infinite linear alternate;
+}
+@keyframes glitch {
+  0% { clip: rect(0, 900px, 0, 0); }
+  5% { clip: rect(10px, 9999px, 40px, 0); }
+  10% { clip: rect(80px, 9999px, 100px, 0); }
+  15% { clip: rect(20px, 9999px, 30px, 0); }
+  20% { clip: rect(60px, 9999px, 90px, 0); }
+  100% { clip: rect(0, 900px, 0, 0); }
+}
+.subtitle {
+  margin-bottom: 30px;
+}
+.tracker button,
+.toggle {
+  background: none;
+  border: 1px solid #33ffcc;
+  color: #33ffcc;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.tracker button:hover,
+.toggle:hover {
+  background: #33ffcc;
+  color: #000;
+}
+#guide {
+  text-align: left;
+  margin-top: 20px;
+  background: #111;
+  padding: 10px;
+  border: 1px solid #33ffcc;
+}
+.hidden {
+  display: none;
+}
