@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smoke.EXE — System Override</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="glitch" data-text="Smoke.EXE">Smoke.EXE</h1>
+    <p class="subtitle">Ты — не сигареты. Ты — система, которая себя переписывает.</p>
+
+    <div class="tracker">
+      <h2>Дней без сигарет: <span id="daysCounter">0</span></h2>
+      <button onclick="incrementDays()">+1 день</button>
+      <button onclick="resetDays()">Сорвался</button>
+    </div>
+
+    <div class="message" id="motivationText"></div>
+
+    <button class="toggle" onclick="toggleGuide()">Режим инструкций</button>
+    <div id="guide" class="hidden">
+      <pre>
+[1] Отслеживай триггеры: стресс, скука, автоматизм.
+[2] Уменьшай дозу по неделям: 3 → 2 → 1 → 0.
+[3] Замена: мята, вода, дыхание, прогулка.
+[4] Никотинозаместители: только при сильной тяге.
+[5] Новые ритуалы вместо сигарет.
+[6] Срыв — не конец. Это баг. Возвращайся к апдейту.
+      </pre>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
